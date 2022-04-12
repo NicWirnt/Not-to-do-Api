@@ -1,11 +1,13 @@
 import express from "express";
-import { insertTask } from "../models/task/TaskList.model.js";
+import { insertTask, getTasks } from "../models/task/TaskList.model.js";
 const router = express.Router();
 
 // replace the faketasks with the real ones from database
 
 //task api end points
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const result = await getTasks();
+  console.log(result);
   res.json({
     status: "success",
     message: "you made a get call",

@@ -14,5 +14,5 @@ const TaskListSchema = new mongoose.Schema({
   },
 });
 
-const TaskList = mongoose.model("Task", TaskListSchema);
+const TaskList = mongoose.model("Task", TaskListSchema); //Task converted to lowercase and plural
 export default TaskList;
