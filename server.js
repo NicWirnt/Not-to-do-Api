@@ -5,7 +5,7 @@ const PORT = 8000;
 
 
 // Api end points
-app.get("/api/vi", (req, res) =>{
+app.get("/api/v1", (req, res) =>{
     res.json({
         message: "Welcome to api"
     })
