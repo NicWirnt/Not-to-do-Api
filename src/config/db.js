@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 
 const mongoClient = () => {
   try {
-    const mongoUrl = "mongodb://localhost:27017/classA";
-
-    const connection = mongoose.connect(mongoUrl);
+    const connection = mongoose.connect(process.env.MONGO_URL);
 
     if (connection) {
       console.log("MongoDB is connected");
